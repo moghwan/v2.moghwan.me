@@ -88,3 +88,6 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# tailwind default config file
+tailwind.full.config.js

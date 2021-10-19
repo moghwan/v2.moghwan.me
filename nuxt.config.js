@@ -2,6 +2,17 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  // env vars
+  env: {
+  },
+
+  publicRuntimeConfig: {
+    my_articles_url: process.env.devto_url_articles + process.env.username,
+  },
+  // privateRuntimeConfig: {
+  //   myPrivateToken: process.env.PRIVATE_TOKEN
+  // },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'v2.moghwan.me',
@@ -31,6 +42,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    'nuxt-vite',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -41,6 +53,7 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/markdownit',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
