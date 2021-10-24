@@ -91,3 +91,6 @@ sw.*
 
 # tailwind default config file
 tailwind.full.config.js
+
+# todos
+todo.md

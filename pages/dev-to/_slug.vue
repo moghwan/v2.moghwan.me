@@ -18,9 +18,9 @@ export default {
     const username = "moghwan";
     const singlePostUrl = `https://dev.to/api/articles/${username}/`;
 
-    const post = await $axios.get(singlePostUrl+params.slug)
+    const { data } = await $axios.get(singlePostUrl+params.slug)
       .catch(err => console.log(err))
-    return { post: post.data }
+    return { post: data }
   }
 }
 </script>

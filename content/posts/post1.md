@@ -2,11 +2,12 @@
 published: false
 title: "first markdown post"
 cover_image:
-description:
-tags: markdown, nuxt, content
+description: lorem...
+tag_list: ["markdown", "nuxt", "content"]
 series:
 canonical_url:
 alt: "first markdown post"
+created_at: "2020-06-28"
 ---
 
 <div class="p-4 mb-4 text-white bg-blue-500">
