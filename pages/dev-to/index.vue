@@ -1,22 +1,18 @@
 <template>
   <div>
-    dev.to index
+    TO REMOVE
     <NuxtLink to="/">rje3</NuxtLink>
-    <div class="">
-      <b>posts</b>
-      <div v-for="post in posts" :key="post.id">
-        {{ post.title }}
-        <NuxtLink :to="{ name: 'dev-to-slug', params: { slug: post.slug } }">
-          devtos
-        </NuxtLink>
-      </div>
-    </div>
+    <BlogItem v-for="post in posts" :key="post.id" :article="post"/>
   </div>
 </template>
 
 <script>
+import BlogItem from '~/components/Items/BlogItem.vue'
 export default {
   name: 'Blog',
+  components: {
+    BlogItem,
+  },
   async asyncData({ $content, $axios }) {
     const posts = await $axios.get("https://dev.to/api/articles?username=moghwan")
       .catch(err => console.log(err))
