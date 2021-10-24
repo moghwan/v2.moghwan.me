@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full lg:w-8/12">
+  <div class="w-full">
     <BlogItem v-for="post in posts" :key="post.id" :article="post"/>
   </div>
 </template>
