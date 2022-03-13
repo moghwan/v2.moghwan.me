@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import DevToIcon from '@/components/icons/dev-to?inline';
+import DevToIcon from '@/components/icons/sites/dev-to?inline';
 export default {
   components: {
     DevToIcon,
