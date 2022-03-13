@@ -27,9 +27,9 @@ export default {
     return {
       links: [
         { name: 'Blog',     slug: 'blog' },
-        // { name: 'Projects', slug: 'projects' },
-        // { name: 'Links',    slug: 'links' },
-        // { name: 'About',    slug: 'about' },
+        { name: 'Projects', slug: 'projects' },
+        { name: 'Links',    slug: 'links' },
+        { name: 'About',    slug: 'about' },
       ]
     }
   }
