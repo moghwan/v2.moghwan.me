@@ -1,15 +1,9 @@
 <template>
   <article>
-    <h2>table of content</h2>
-    <nav>
-      <ul>
-        <li v-for="link of post.toc" :key="link.id">
-          <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
-        </li>
-      </ul>
-    </nav>
-    <img :src="post.cover_image" :alt="post.alt" />
+    <img :src="post.cover_image" />
+    {{ post.title }}
     <nuxt-content :document="post" />
+    <div class="content" v-html="post.body_html" />
     <hr>
     saliti?
     <NuxtLink to="/blog">zid 9ra</NuxtLink>
@@ -20,9 +14,22 @@
 
 <script>
 export default {
-  async asyncData({ $content, params }) {
-    const post = await $content('posts', params.slug).fetch()
-    return { post }
+  async asyncData({ $axios, $content, params }) {
+    const post = await $content('posts', params.slug)
+      .fetch()
+      .catch(err => console.log(err))
+
+    if(post != undefined)
+      return { post }
+
+    const username = "moghwan";
+    const singlePostUrl = `https://dev.to/api/articles/${username}/`;
+
+    const { data } = await $axios.get(singlePostUrl+params.slug)
+      .catch(err => console.log(err))
+
+    return { post: data }
+
   }
 }
 </script>
