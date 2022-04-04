@@ -20,6 +20,6 @@
     "@nuxtjs/tailwindcss": "^4.2.1",
     "nuxt-vite": "^0.3.5",
     "postcss": "^8.4.12",
-    "sass": "^1.49.10"
+    "sass": "^1.49.11"
   }
 }
