@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "first markdown post"
 cover_image:
 description: lorem...

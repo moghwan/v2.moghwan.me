@@ -11,7 +11,13 @@ export default {
   components: {
     BlogItem,
   },
-  async asyncData({ $content, $axios }) {
+  async asyncData({ $content, $axios, route }) {
+
+    // TODO: filter posts by tags or type or both
+    const post_type = route.query.post_type;
+    const tag = route.query.tag;
+    // console.info(post_type, tag)
+
     const articles = await $content('posts')
       // .where({published: true})
       .only(['title', 'description', 'img', 'slug', 'author', 'tag_list', 'created_at', 'is_devto'])
