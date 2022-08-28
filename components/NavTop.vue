@@ -26,10 +26,10 @@ export default {
   data() {
     return {
       links: [
-        { name: 'Blog',     slug: 'blog' },
+        // { name: 'Blog',     slug: 'blog' },
         // { name: 'Projects', slug: 'projects' },
         // { name: 'Links',    slug: 'links' },
-        // { name: 'About',    slug: 'about' },
+        { name: 'About',    slug: 'about' },
       ]
     }
   }

@@ -8,6 +8,7 @@ series:
 canonical_url:
 alt: "first markdown post"
 created_at: "2020-06-28"
+is_devto: false
 ---
 
 <div class="p-4 mb-4 text-white bg-blue-500">

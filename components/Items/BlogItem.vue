@@ -6,7 +6,7 @@
               :to="{ name: article.type_of == 'article' ? 'dev-to-slug' : 'blog-slug', params: { slug: article.slug } }"
               class="text-2xl flex font-bold text-gray-700 hover:underline relative">
               {{ article.title }}
-              <DevToIcon class="absolute right-0 top-2" v-if="article.type_of == 'article'" />
+              <DevToIcon class="absolute right-0 top-2" v-if="article.is_devto == true" />
             </NuxtLink>
             <p class="mt-2 text-gray-600">
               {{ article.description }}
