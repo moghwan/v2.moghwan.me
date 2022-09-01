@@ -7,7 +7,7 @@ tag_list: ["markdown", "nuxt", "content"]
 series:
 canonical_url:
 alt: "first markdown post"
-created_at: "2020-06-28"
+created_at: "2020-08-29"
 is_devto: false
 ---
 
